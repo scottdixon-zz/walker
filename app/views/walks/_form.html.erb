@@ -1,0 +1,32 @@
+<%= form_with(model: walk, local: true) do |form| %>
+  <% if walk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(walk.errors.count, "error") %> prohibited this walk from being saved:</h2>
+
+      <ul>
+      <% walk.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :client_id %>
+    <%= form.text_field :client_id, id: :walk_client_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :datetime %>
+    <%= form.datetime_select :datetime, id: :walk_datetime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distance %>
+    <%= form.number_field :distance, id: :walk_distance %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
