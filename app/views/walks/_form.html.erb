@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :client_id %>
-    <%= form.text_field :client_id, id: :walk_client_id %>
+    <%= form.label 'Client' %>
+    <%= form.collection_select :client_id, Client.all.order(:name), :id, :name, include_blank: true && 'Select a Client' %>
   </div>
 
   <div class="field">
-    <%= form.label :datetime %>
+    <%= form.label 'Date of walk:' %>
     <%= form.datetime_select :datetime, id: :walk_datetime %>
   </div>
 
   <div class="field">
-    <%= form.label :distance %>
-    <%= form.number_field :distance, id: :walk_distance %>
+    <%= form.label 'Distance in km:' %>
+    <%= form.number_field :distance, id: :walk_distance, value: 1 %>
   </div>
 
   <div class="actions">
