@@ -1,4 +1,6 @@
 <p id="notice"><%= notice %></p>
+<div>
+  <h3>Client</h3>
 
 <p>
   <strong>Name:</strong>
@@ -9,16 +11,26 @@
   <strong>Phone:</strong>
   <%= @client.phone %>
 </p>
+</div>
+
+<div>
+  <h3> Dog </h3>
 
 <p>
-  <strong>Dog name:</strong>
+  <strong>Name:</strong>
   <%= @client.dog_name %>
 </p>
 
 <p>
-  <strong>Dog dob:</strong>
+  <strong>Date of Birth:</strong>
   <%= @client.dog_dob %>
 </p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @client.age %>
+</p>
+</div>
 
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>
