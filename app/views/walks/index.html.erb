@@ -15,7 +15,7 @@
   <tbody>
     <% @walks.each do |walk| %>
       <tr>
-        <td><%= walk.client %></td>
+        <td><%= walk.client.name %></td>
         <td><%= walk.datetime %></td>
         <td><%= walk.distance %></td>
         <td><%= link_to 'Show', walk %></td>
