@@ -12,21 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :client_id %>
-    <%= form.text_field :client_id, id: :walk_client_id %>
+    <h4>Client Name:</h4>
+    <%= collection_select(:walk, :client_id, Client.all, :id, :name, prompt: "Please select a Client") %>
   </div>
 
   <div class="field">
-    <%= form.label :datetime %>
-    <%= form.datetime_select :datetime, id: :walk_datetime %>
+    <h4>Date:</h4>
+    <%= form.datetime_select :datetime %>
   </div>
 
   <div class="field">
-    <%= form.label :distance %>
-    <%= form.number_field :distance, id: :walk_distance %>
+    <h4>Walk distance:</h4>
+    <%= form.number_field :distance, prompt: true %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Submit" %>
   </div>
 <% end %>
+
+<%= link_to('Logout', destroy_user_session_path, method: :delete) %>       
