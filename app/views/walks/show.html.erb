@@ -2,7 +2,7 @@
 
 <p>
   <strong>Client:</strong>
-  <%= @walk.client %>
+  <%= Client.find(params[:id]).name %>
 </p>
 
 <p>
@@ -13,6 +13,11 @@
 <p>
   <strong>Distance:</strong>
   <%= @walk.distance %>
+</p>
+
+<p>
+  <strong>Price for walk:</strong>
+  $<%= @walk.distance * 3.4 %>
 </p>
 
 <%= link_to 'Edit', edit_walk_path(@walk) %> |
