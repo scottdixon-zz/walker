@@ -13,8 +13,7 @@
 
   <div class="field">
     <%= form.label :client_id %>
-    <%= form.text_field :client_id, id: :walk_client_id %>
-  </div>
+    <%= collection_select(:walk, :client_id, Client.all, :id, :name, prompt: "Please select a Client") %>  </div>
 
   <div class="field">
     <%= form.label :datetime %>
