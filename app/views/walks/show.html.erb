@@ -2,7 +2,7 @@
 
 <p>
   <strong>Client:</strong>
-  <%= @walk.client %>
+  <%= @walk.client.name %>
 </p>
 
 <p>
@@ -13,6 +13,11 @@
 <p>
   <strong>Distance:</strong>
   <%= @walk.distance %>
+</p>
+
+<p>
+  <strong>Cost: $</strong>
+  <%= @cost%>
 </p>
 
 <%= link_to 'Edit', edit_walk_path(@walk) %> |
