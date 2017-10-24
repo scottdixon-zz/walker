@@ -1,4 +1,10 @@
-<p id="notice"><%= notice %></p>
+<p id="notice">
+  <%= notice %>
+</p>
+
+<h1>
+  Client
+</h1>
 
 <p>
   <strong>Name:</strong>
@@ -10,14 +16,22 @@
   <%= @client.phone %>
 </p>
 
+<h2>
+  Dog
+</h2>
 <p>
-  <strong>Dog name:</strong>
+  <strong>Name:</strong>
   <%= @client.dog_name %>
 </p>
 
 <p>
-  <strong>Dog dob:</strong>
+  <strong>D.O.B:</strong>
   <%= @client.dog_dob %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= AgeCalculator.new(@client.dog_dob).age %>
 </p>
 
 <%= link_to 'Edit', edit_client_path(@client) %> |
