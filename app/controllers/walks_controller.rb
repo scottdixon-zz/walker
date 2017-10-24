@@ -1,4 +1,5 @@
 class WalksController < ApplicationController
+  before_action :authenticate_employee!
   before_action :set_walk, only: [:show, :edit, :update, :destroy]
 
   # GET /walks
@@ -69,6 +70,6 @@ class WalksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def walk_params
-      params.require(:walk).permit(:client_id, :datetime, :distance)
+      params.require(:walk).permit(:dog_id, :datetime, :distance)
     end
 end

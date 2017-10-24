@@ -1,3 +1,3 @@
 class Walk < ApplicationRecord
-  belongs_to :client
+  belongs_to :dog
 end

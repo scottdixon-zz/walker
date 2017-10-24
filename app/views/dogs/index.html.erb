@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Client</th>
+      <th>Dob</th>
+      <th>Age</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dogs.each do |dog| %>
+      <tr>
+        <td><%= dog.name %></td>
+        <td><%= dog.client.name %></td>
+        <td><%= dog.dob %></td>
+        <td><%= AgeCalculator.new(dog.dob).age %></td>
+        <td><%= link_to 'Show', dog %></td>
+        <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
+        <td><%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<br>
+<%= link_to 'Back Home', root_path %>
+<%= link_to 'New Dog', new_dog_path %>
