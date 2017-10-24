@@ -15,5 +15,10 @@
   <span><%= @walk.distance %> km</span>
 </p>
 
+<p>
+  <strong>Price:</strong>
+  <span><%= number_to_currency(@walk.price(3.40), precision: 2) %></span>
+</p>
+
 <%= link_to 'Edit', edit_walk_path(@walk) %> |
 <%= link_to 'Back', walks_path %>
