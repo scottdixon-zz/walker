@@ -10,6 +10,7 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
+
   end
 
   # GET /clients/new
@@ -19,6 +20,7 @@ class ClientsController < ApplicationController
 
   # GET /clients/1/edit
   def edit
+    
   end
 
   # POST /clients
@@ -60,6 +62,10 @@ class ClientsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  # def age
+  #   now = Time.now.utc.to_date
+  #   now.year - birthday.year - (birthday.to_date.change(:year => now.year) > now ? 1 : 0)
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
