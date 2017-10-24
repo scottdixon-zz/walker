@@ -15,6 +15,7 @@ class WalksController < ApplicationController
   # GET /walks/new
   def new
     @walk = Walk.new
+    @client_options = Client.all.map{ |client| [ client.name, client.id ] }
   end
 
   # GET /walks/1/edit
