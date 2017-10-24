@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :client_id %>
-    <%= form.text_field :client_id, id: :walk_client_id %>
+    <%= form.collection_select :client_id, Client.all.order(:name), :id, :name, include_blank: true && 'Select a Client' %>
   </div>
 
   <div class="field">

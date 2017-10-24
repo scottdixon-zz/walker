@@ -2,17 +2,17 @@
 
 <p>
   <strong>Client:</strong>
-  <%= @walk.client %>
+  <%= @walk.client.name %>
 </p>
 
 <p>
   <strong>Datetime:</strong>
-  <%= @walk.datetime %>
+  <%= @walk.datetime.strftime("%A, %y %B %Y") %>
 </p>
 
 <p>
   <strong>Distance:</strong>
-  <%= @walk.distance %>
+  <span><%= @walk.distance %> km</span>
 </p>
 
 <%= link_to 'Edit', edit_walk_path(@walk) %> |

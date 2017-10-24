@@ -5,6 +5,7 @@ class WalksController < ApplicationController
   # GET /walks.json
   def index
     @walks = Walk.all
+    @clients = Client.all
   end
 
   # GET /walks/1
