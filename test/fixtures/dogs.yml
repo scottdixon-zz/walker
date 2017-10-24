@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  client_id: one
+  dob: 2017-10-24
+
+two:
+  name: MyString
+  client_id: two
+  dob: 2017-10-24

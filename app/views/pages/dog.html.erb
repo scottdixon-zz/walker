@@ -1,0 +1,10 @@
+<% if @dog.present? %>
+	<h1><%= @dog.name %></h1>
+	<h4><%= @dog.name %>'s Walks:</h4>
+	<% @dog.walks.each do |walk| %>
+		<p>Date/Time: <%= walk.datetime %></p>
+		<p>Distance: <%= walk.distance %></p>
+	<% end %>
+	<% else %>
+	<h1><%= @sorry %>.</h1>
+<% end %>

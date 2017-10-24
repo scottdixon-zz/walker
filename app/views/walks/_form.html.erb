@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :client_id %>
-    <%= form.text_field :client_id, id: :walk_client_id %>
+    <%= form.label :dog_id %>
+    <%= form.collection_select(:dog_id, Dog.all, :id, :name) %>
   </div>
 
   <div class="field">
