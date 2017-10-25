@@ -5,6 +5,7 @@ class WalksController < ApplicationController
   # GET /walks.json
   def index
     @walks = Walk.all
+    @clients = Client.all
   end
 
   # GET /walks/1
@@ -69,6 +70,6 @@ class WalksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def walk_params
-      params.require(:walk).permit(:client_id, :datetime, :distance)
+      params.require(:walk).permit(:client_id, :datetime, :distance, :client_id, :dog_id)
     end
 end

@@ -6,8 +6,9 @@
   <thead>
     <tr>
       <th>Client</th>
-      <th>Datetime</th>
+      <th>Date</th>
       <th>Distance</th>
+      <th>Price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +16,10 @@
   <tbody>
     <% @walks.each do |walk| %>
       <tr>
-        <td><%= walk.client %></td>
-        <td><%= walk.datetime %></td>
-        <td><%= walk.distance %></td>
+        <td><%= walk.client.name %></td>
+        <td><%= walk.datetime.strftime("%A, %y %B %Y") %></td>
+        <td><%= walk.distance %> km</td>
+        <td><%= number_to_currency(walk.price(3.40), precision: 2) %></td>
         <td><%= link_to 'Show', walk %></td>
         <td><%= link_to 'Edit', edit_walk_path(walk) %></td>
         <td><%= link_to 'Destroy', walk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
